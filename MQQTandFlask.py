@@ -42,7 +42,7 @@ client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 
 def worker():
     client.connect(mqttBroker)
-    client.subscribe("tempBob")
+    client.subscribe("tempTom")
     client.on_message=on_message
     # The 'loop_forever' is blocking code and if it did not run in a separate thread
     # the program would not be able to launch Flask website, as it would be stuck
